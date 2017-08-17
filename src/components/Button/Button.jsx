@@ -5,9 +5,9 @@ import './button.less'
 
 import Group from './Group'
 
-const Button = ({ children, className, disabled, block, plain, size, type, ...props }) => (
+const Button = ({ children, className, disabled, block, plain, size, type, ...others }) => (
   <button
-    {...props}
+    {...others}
     disabled={disabled}
     className={classNames('rc-btn', {
       [`rc-btn_${size}`]: size,
