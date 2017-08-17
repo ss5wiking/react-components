@@ -7,6 +7,13 @@
 
 
 ## Usage
+
+> 预览
+
+![](images/modal/modal.png)
+
+> 代码
+
 ```
 class App extends React.Component {
   constructor() {

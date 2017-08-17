@@ -1,0 +1,62 @@
+@import './color';
+
+// button
+@btnBorderRadius: 2px;
+@btnGapWidth: 6px;
+
+// ===========================================================
+// button size
+// ===========================================================
+
+// default
+@btnDefaultFontSize: 14px;
+@btnDefaultLineHeight: 42px;
+@btnDefaultGapWidth: 15px;
+@btnDefaultBorderWidth: 1px;
+
+// large
+@btnLargeFontSize: 18px;
+@btnLargeLineHeight: 48px;
+@btnLargeBorderWidth: 1px;
+@btnLargeGapWidth: 18px;
+
+// small
+@btnSmallFontSize: 12px;
+@btnSmallLineHeight: 30px;
+@btnSmallBorderWidth: 1px;
+@btnSmallGapWidth: 12px;
+
+// ===========================================================
+// button theme
+// ===========================================================
+
+// default
+@btnDefaultFontColor: @colorDefault;
+@btnDefaultBg: @colorWhite;
+@btnDefaultBorderColor: @colorMuted;
+@btnDefaultActiveBg: lighten(@colorMuted, 15%);
+@btnDefaultDisabledBg: @colorMuted;
+@btnDefaultDisabledFontColor: @colorWhite;
+
+// primary
+@btnPrimaryFontColor: @colorWhite;
+@btnPrimaryBg: @colorPrimary;
+@btnPrimaryBorderColor: @colorPrimary;
+@btnPrimaryActiveBg: @colorPrimaryActive;
+@btnPrimaryDisabledBg: @colorPrimaryDisabled;
+
+// warning
+@btnWarningFontColor: @colorWhite;
+@btnWarningBg: @colorWarning;
+@btnWarningBorderColor: @colorWarning;
+@btnWarningActiveBg: @colorWarningActive;
+@btnwarningDisabledBg: @colorWarningDisabled;
+
+// plain
+@btnPlainActiveBg: lighten(@colorMuted, 15%);
+
+@btnPrimaryPlainColor: @colorPrimary;
+@btnPrimaryPlainActiveBg: lighten(@colorPrimary, 30%);
+
+@btnWarningPlainColor: @colorWarning;
+@btnWarningPlainActiveBg: lighten(@colorWarning, 1%);

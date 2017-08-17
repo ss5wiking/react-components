@@ -1,0 +1,181 @@
+@import "../../style/base";
+
+:global {
+  .rc-btn {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    padding: 0 @btnDefaultGapWidth;
+    width: auto;
+    border: none;
+    background: @btnDefaultBg;
+    border-radius: @btnBorderRadius;
+    line-height: @btnDefaultLineHeight;
+    font-size: @btnDefaultFontSize;
+    color: @btnDefaultFontColor;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    outline: none;
+    overflow: hidden;
+    -webkit-appearance: none;
+    .setRoundLine();
+    .setTapColor();
+
+    &:not(.rc-btn_disabled):visited {
+      color: @btnDefaultFontColor;
+    }
+
+    &:not(.rc-btn_disabled):active {
+      color: @btnDefaultFontColor;
+      background-color: @btnDefaultActiveBg;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    // ===========================================================
+    // button block
+    // ===========================================================
+    &_block {
+      display: block;
+      width: 100%;
+    }
+
+    // ===========================================================
+    // button group
+    // ===========================================================
+    &-group {
+      display: flex;
+      .rc-btn {
+        flex: 1;
+        margin: 0 @btnGapWidth;
+        width: auto;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    // ===========================================================
+    // button size
+    // ===========================================================
+    &_large {
+      padding: 0 @btnLargeGapWidth;
+      line-height: @btnLargeLineHeight;
+      font-size: @btnLargeFontSize;
+    }
+
+    &_small {
+      padding: 0 @btnSmallGapWidth;
+      line-height: @btnSmallLineHeight;
+      font-size: @btnSmallFontSize;
+    }
+
+    // ===========================================================
+    // button theme
+    // ===========================================================
+    &_warning {
+      background-color: @btnWarningBg;
+      border-color: @btnWarningBorderColor;
+      color: @btnWarningFontColor;
+
+      &:not(.rc-btn_disabled):visited {
+        color: @btnWarningFontColor;
+      }
+
+      &:not(.rc-btn_disabled):active {
+        color: @btnWarningFontColor;
+        background-color: @btnWarningActiveBg;
+      }
+    }
+
+    &_primary {
+      background-color: @btnPrimaryBg;
+      border-color: @btnPrimaryBorderColor;
+      color: @btnPrimaryFontColor;
+
+      &:not(.rc-btn_disabled):visited {
+        color: @btnPrimaryFontColor;
+      }
+
+      &:not(.rc-btn_disabled):active {
+        color: @btnPrimaryFontColor;
+        background-color: @btnPrimaryActiveBg;
+      }
+    }
+
+    // ===========================================================
+    // button plain 背景透明
+    // ===========================================================
+    &_plain {
+      &.rc-btn {
+        background-color: transparent;
+
+        &:not(.rc-btn_disabled):active {
+          background-color: @btnPlainActiveBg;
+        }
+
+        &_primary {
+          background-color: transparent;
+          color: @btnPrimaryPlainColor;
+
+          &:before {
+            border-color: @btnPrimaryPlainColor;
+          }
+
+          &:not(.rc-btn_disabled):visited {
+            color: @btnPrimaryPlainColor;
+          }
+
+          &:not(.rc-btn_disabled):active {
+            color: @btnPrimaryPlainColor;
+            background-color: @btnPlainActiveBg;
+          }
+        }
+
+        &_warning {
+          background-color: transparent;
+          color: @btnWarningPlainColor;
+
+          &:before {
+            border-color: @btnWarningPlainColor;
+          }
+
+          &:not(.rc-btn_disabled):visited {
+            color: @btnWarningPlainColor;
+          }
+
+          &:not(.rc-btn_disabled):active {
+            color: @btnWarningPlainColor;
+            background-color: @btnPlainActiveBg;
+          }
+        }
+      }
+    }
+
+    // ===========================================================
+    // button disabled
+    // ===========================================================
+    &_disabled {
+      &.rc-btn {
+        color: @btnDefaultDisabledFontColor;
+        background-color: @btnDefaultDisabledBg;
+
+        &_primary {
+          color: @btnPrimaryFontColor;
+          background-color: @btnPrimaryDisabledBg;
+        }
+
+        &_warning {
+          color: @btnWarningFontColor;
+          background-color: @btnwarningDisabledBg;
+        }
+      }
+    }
+  }
+}

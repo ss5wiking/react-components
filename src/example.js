@@ -1,47 +1,72 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import './style/reset.less'
 
-import { Modal } from './components'
+import { Button } from './components'
 
-class App extends Component {
-  constructor() {
-    super()
-    this.state = { visible: false }
-  }
+const ButtonGroup = Button.Group
 
-  showModal() {
-    this.setState({ visible: true })
-  }
+const App = () => {
+  return (
+    <div>
+      <section>
+        <Button>默认</Button>
+        <br />
+        <Button type="primary">重要</Button>
+        <br />
+        <Button type="warning">提醒</Button>
+      </section>
+      <br />
 
-  hideModal() {
-    this.setState({ visible: false })
-  }
+      <ButtonGroup>
+        <Button>默认</Button>
+        <Button type="primary">重要</Button>
+        <Button type="warning">提醒</Button>
+      </ButtonGroup>
+      <br />
 
-  render() {
-    const { visible } = this.state
-    const buttons = [
-      { text: '取消', onClick: () => this.hideModal() },
-      { text: '确定', primary: true, onClick: () => this.hideModal() },
-    ]
+      <ButtonGroup>
+        <Button disabled>默认</Button>
+        <Button disabled type="primary">重要</Button>
+        <Button disabled type="warning">提醒</Button>
+      </ButtonGroup>
+      <br />
 
-    return (
-      <div>
-        <button
-          onClick={() => this.showModal()}
-        >显示模态框</button>
+      <ButtonGroup>
+        <Button plain>默认</Button>
+        <Button plain type="primary">重要</Button>
+        <Button plain type="warning">提醒</Button>
+      </ButtonGroup>
+      <section>
+        <Button>默认</Button>
+        <br />
+        <Button type="primary">重要</Button>
+        <br />
+        <Button type="warning">提醒</Button>
+      </section>
+      <br />
 
-        <Modal
-          title="标题"
-          visible={visible}
-          buttons={buttons}
-        >
-          <p>这里是内容...</p>
-          <p>这里是内容...</p>
-        </Modal>
-      </div>
-    )
-  }
+      <ButtonGroup>
+        <Button>默认</Button>
+        <Button type="primary">重要</Button>
+        <Button type="warning">提醒</Button>
+      </ButtonGroup>
+      <br />
+
+      <ButtonGroup>
+        <Button disabled>默认</Button>
+        <Button disabled type="primary">重要</Button>
+        <Button disabled type="warning">提醒</Button>
+      </ButtonGroup>
+      <br />
+
+      <ButtonGroup>
+        <Button plain>默认</Button>
+        <Button plain type="primary">重要</Button>
+        <Button plain type="warning">提醒</Button>
+      </ButtonGroup>
+    </div>
+  )
 }
 
 ReactDOM.render(
